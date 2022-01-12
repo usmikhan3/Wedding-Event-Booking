@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:provider/provider.dart';
 import 'package:signature_event_booking/constants/constants.dart';
 import 'package:signature_event_booking/models/event_model.dart';
@@ -60,6 +61,8 @@ class _AddEventDetailsViewState extends State<AddEventDetailsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      backgroundColor: kThemeColor,
       appBar: AppBar(
         centerTitle: true,
         leading: GestureDetector(
@@ -89,176 +92,213 @@ class _AddEventDetailsViewState extends State<AddEventDetailsView> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20.w,
-            vertical: 20.h,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+        child: GlassmorphicContainer(
+          height:  MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          padding: EdgeInsets.symmetric(horizontal: 20.w,),
+          borderRadius: 20,
+          blur: 20,
+          alignment: Alignment.bottomCenter,
+          border: 2,
+          linearGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF848181).withOpacity(0.5),
+                Color(0xFF848181).withOpacity(0.05),
+              ],
+              stops: [
+                0.1,
+                1,
+              ]),
+          borderGradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFFffffff).withOpacity(0.5),
+              Color((0xFFFFFFFF)).withOpacity(0.5),
+            ],
           ),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                CustomEventField(
-                  controller: _ownerNameController,
-                  textInputType: TextInputType.name,
-                  textInputAction: TextInputAction.next,
-                  hintText: 'Owner name',
-                  labelText: 'Owner Name',
-                  fieldName: "Owner Name",
-                  onSubmitted: saveForm,
-                ),
-                CustomEventField(
-                  controller: _nameController,
-                  textInputType: TextInputType.name,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Customer Name',
-                  hintText: 'Add Customer Name',
-                  fieldName: "Customer Name",
-                  onSubmitted: saveForm,
-                ),
-                CustomEventField(
-                  controller: _phoneController,
-                  textInputType: TextInputType.phone,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Phone Number',
-                  hintText: 'Add Phone Number',
-                  fieldName: "Phone number",
-                  onSubmitted: saveForm,
-                ),  CustomEventField(
-                  controller: _eventTitleController,
-                  textInputType: TextInputType.name,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Event Name',
-                  hintText: 'Add Event Name',
-                  fieldName: "Event Title",
-                  onSubmitted: saveForm,
-                ),
-                CustomEventField(
-                  controller: _gatheringController,
-                  textInputType: TextInputType.number,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Number of Gathering',
-                  hintText: 'Add Number Of gathering',
-                  fieldName: "Gathering",
-                  onSubmitted: saveForm,
-                ),
-               CustomToggleField(heading: "Decoration Service",  child: ToggleSwitch(
-                 initialLabelIndex: 1,
-                 totalSwitches: 2,
-                 fontSize: 18.sp,
-                 iconSize: 25.h,
-                 activeFgColor: Colors.white,
-                 activeBgColor: [kThemeColor],
-                 inactiveBgColor:Color(0xFF31261B),
-                 inactiveFgColor: Colors.white,
-                 //icons: [Icons.done,Icons.clear],
-                 labels: ["YES","NO"],
-                 onToggle: (index){
-                   print('switched to: $index');
-                   index == 0 ? _deco = true : _deco = false;
-                 },
-               ),),
-                SizedBox(height: 25.h,),
+          child:  SingleChildScrollView(
 
-                CustomEventField(
-                  controller: _advanceController,
-                  textInputType: TextInputType.number,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Advance Payment',
-                  hintText: 'Add Advance Payment',
-                  fieldName: "Advance",
-                  onSubmitted: saveForm,
-                ),
-                CustomEventField(
-                  controller: _remainingController,
-                  textInputType: TextInputType.number,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Remaining Payment',
-                  hintText: 'Add Remaining Payment',
-                  fieldName: "Remailing Payment",
-                  onSubmitted: saveForm,
-                ),
-
-
-                buildDateTimePickers(),
-                Divider(
-                  color: Colors.black38,
-                  thickness: 1.h,
-                ),
-                SizedBox(height: 25.h,),
-
-           const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "SELECT STATUS",
-                style: TextStyle(fontWeight: FontWeight.bold)),
-            ),
-              SizedBox(height: 20,),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                 ToggleSwitch(
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 20.w,
+                vertical: 20.h,
+              ),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    CustomEventField(
+                      controller: _ownerNameController,
+                      textInputType: TextInputType.name,
+                      textInputAction: TextInputAction.next,
+                      hintText: 'Owner name',
+                      labelText: 'Owner Name',
+                      fieldName: "Owner Name",
+                      onSubmitted: saveForm,
+                    ),
+                    CustomEventField(
+                      controller: _nameController,
+                      textInputType: TextInputType.name,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Customer Name',
+                      hintText: 'Add Customer Name',
+                      fieldName: "Customer Name",
+                      onSubmitted: saveForm,
+                    ),
+                    CustomEventField(
+                      controller: _phoneController,
+                      textInputType: TextInputType.phone,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Phone Number',
+                      hintText: 'Add Phone Number',
+                      fieldName: "Phone number",
+                      onSubmitted: saveForm,
+                    ),  CustomEventField(
+                      controller: _eventTitleController,
+                      textInputType: TextInputType.name,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Event Name',
+                      hintText: 'Add Event Name',
+                      fieldName: "Event Title",
+                      onSubmitted: saveForm,
+                    ),
+                    CustomEventField(
+                      controller: _gatheringController,
+                      textInputType: TextInputType.number,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Number of Gathering',
+                      hintText: 'Add Number Of gathering',
+                      fieldName: "Gathering",
+                      onSubmitted: saveForm,
+                    ),
+                    CustomToggleField(heading: "Decoration Service",  child: ToggleSwitch(
                       initialLabelIndex: 1,
                       totalSwitches: 2,
-                      fontSize: 16.sp,
+                      fontSize: 18.sp,
                       iconSize: 25.h,
-                      minWidth: 100,
                       activeFgColor: Colors.white,
                       activeBgColor: [kThemeColor],
                       inactiveBgColor:Color(0xFF31261B),
                       inactiveFgColor: Colors.white,
                       //icons: [Icons.done,Icons.clear],
-                      labels: ["HOLD","BOOKED"],
+                      labels: ["YES","NO"],
                       onToggle: (index){
                         print('switched to: $index');
-                        index == 0 ? _status = true : _status = false;
+                        index == 0 ? _deco = true : _deco = false;
                       },
+                    ),),
+                    SizedBox(height: 25.h,),
+
+                    CustomEventField(
+                      controller: _advanceController,
+                      textInputType: TextInputType.number,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Advance Payment',
+                      hintText: 'Add Advance Payment',
+                      fieldName: "Advance",
+                      onSubmitted: saveForm,
+                    ),
+                    CustomEventField(
+                      controller: _remainingController,
+                      textInputType: TextInputType.number,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Remaining Payment',
+                      hintText: 'Add Remaining Payment',
+                      fieldName: "Remailing Payment",
+                      onSubmitted: saveForm,
                     ),
 
-                  // CustomToggleField(heading: "Booked",  child: ToggleSwitch(
-                  //   initialLabelIndex: 1,
-                  //   totalSwitches: 2,
-                  //   fontSize: 18.sp,
-                  //   iconSize: 25.h,
-                  //   activeFgColor: Colors.white,
-                  //   activeBgColor: [kThemeColor],
-                  //   inactiveBgColor:Color(0xFF31261B),
-                  //   inactiveFgColor: Colors.white,
-                  //   //icons: [Icons.done,Icons.clear],
-                  //   labels: ["YES","NO"],
-                  //   onToggle: (index){
-                  //     print('switched to: $index');
-                  //     index == 0 ? _booked = true : _booked = false;
-                  //   },
-                  // )
-                  //   ,),
-                ],
+
+                    buildDateTimePickers(),
+                    Divider(
+                      color: Colors.black38,
+                      thickness: 1.h,
+                    ),
+                    SizedBox(height: 25.h,),
+
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                          "SELECT STATUS",
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                    SizedBox(height: 20,),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ToggleSwitch(
+                          initialLabelIndex: 1,
+                          totalSwitches: 2,
+                          fontSize: 16.sp,
+                          iconSize: 25.h,
+                          minWidth: 100,
+                          activeFgColor: Colors.white,
+                          activeBgColor: [kThemeColor],
+                          inactiveBgColor:Color(0xFF31261B),
+                          inactiveFgColor: Colors.white,
+                          //icons: [Icons.done,Icons.clear],
+                          labels: ["HOLD","BOOKED"],
+                          onToggle: (index){
+                            print('switched to: $index');
+                            index == 0 ? _status = true : _status = false;
+                          },
+                        ),
+
+                        // CustomToggleField(heading: "Booked",  child: ToggleSwitch(
+                        //   initialLabelIndex: 1,
+                        //   totalSwitches: 2,
+                        //   fontSize: 18.sp,
+                        //   iconSize: 25.h,
+                        //   activeFgColor: Colors.white,
+                        //   activeBgColor: [kThemeColor],
+                        //   inactiveBgColor:Color(0xFF31261B),
+                        //   inactiveFgColor: Colors.white,
+                        //   //icons: [Icons.done,Icons.clear],
+                        //   labels: ["YES","NO"],
+                        //   onToggle: (index){
+                        //     print('switched to: $index');
+                        //     index == 0 ? _booked = true : _booked = false;
+                        //   },
+                        // )
+                        //   ,),
+                      ],
+                    ),
+                    SizedBox(height: 15.h,),
+                    Divider(
+                      color: Colors.black38,
+                      thickness: 1.h,
+                    ),
+                    SizedBox(height: 20.h,),
+                    CustomEventField(
+                      controller: _descriptionController,
+                      textInputType: TextInputType.text,
+                      textInputAction: TextInputAction.next,
+                      labelText: 'Description',
+                      hintText: 'Add Description',
+                      fieldName: "Description",
+                      onSubmitted: saveForm,
+                    ),
+                    SizedBox(width: 388.w,child: CustomButton(text: "Confirm Now",  onPress: saveForm,))
+                  ],
+
+                ),
+
               ),
-                SizedBox(height: 15.h,),
-                Divider(
-                  color: Colors.black38,
-                  thickness: 1.h,
-                ),
-                SizedBox(height: 20.h,),
-                CustomEventField(
-                  controller: _descriptionController,
-                  textInputType: TextInputType.text,
-                  textInputAction: TextInputAction.next,
-                  labelText: 'Description',
-                  hintText: 'Add Description',
-                  fieldName: "Description",
-                  onSubmitted: saveForm,
-                ),
-                SizedBox(width: 388.w,child: CustomButton(text: "Confirm Now",  onPress: saveForm,))
-              ],
-
             ),
-
           ),
         ),
-      ),
+      )
+
+
+
+
+
     );
   }
 
@@ -320,6 +360,7 @@ class _AddEventDetailsViewState extends State<AddEventDetailsView> {
         ),
         Expanded(
           child: buildDropDownField(
+
             text: Utils.toTime(fromDate),
             onClicked: () => pickFromDateTime(pickDate: false),
           ),
@@ -348,7 +389,7 @@ class _AddEventDetailsViewState extends State<AddEventDetailsView> {
       {required String text, required VoidCallback onClicked}) =>
       ListTile(
         onTap: onClicked,
-        title: Text(text),
+        title: FittedBox(child: Text(text,style: TextStyle(color: Colors.white),)),
         trailing: const Icon(
           Icons.arrow_drop_down,
         ),
@@ -368,9 +409,9 @@ class _AddEventDetailsViewState extends State<AddEventDetailsView> {
      final isValid = _formKey.currentState!.validate();
     if (isValid) {
       final event = Event(
-        backgroundColor: _status  ? Color(0xFFF4CF3A) : Color(0xFFE22635),
+        backgroundColor: _status  ? Color(0xFFF4CF3A) : Colors.green,
         status: _status,
-
+        to:fromDate.add(const Duration(hours: 2)),
         advance: _advanceController.text,
         customerName: _nameController.text,
         customerPhoneNo: _phoneController.text,

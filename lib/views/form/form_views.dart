@@ -451,7 +451,9 @@ class _FormViewState extends State<FormView> {
     final isValid = _formKey.currentState!.validate();
     if (isValid) {
       final event = Event(
-        backgroundColor: _status ? Color(0xFFF4CF3A) : Color(0xFFE22635),
+        backgroundColor: _status ? Color(0xFFF4CF3A)
+            : Colors.green,
+        to:fromDate.add(const Duration(hours: 3)),
         status: _status,
         advance: _advanceController.text,
         customerName: _nameController.text,

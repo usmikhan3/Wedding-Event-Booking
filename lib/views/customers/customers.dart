@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:signature_event_booking/constants/constants.dart';
 import 'package:signature_event_booking/models/event_model.dart';
 import 'package:signature_event_booking/views/calendar/all_dates_view.dart';
@@ -23,7 +24,7 @@ class _CustomersListViewState extends State<CustomersListView> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-
+        backgroundColor: kThemeColor,
         appBar: AppBar(
           centerTitle: true,
           leading: GestureDetector(
@@ -74,53 +75,82 @@ class _CustomersListViewState extends State<CustomersListView> {
             ),
           ),
         ),
-    body: Column(
-      children: [
+    body: Padding(
+      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+      child: GlassmorphicContainer(
+        border: 2,
+        height: 999.h,
+        width: MediaQuery.of(context).size.width,
+        borderRadius: 20,
+        linearGradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFF848181).withOpacity(0.5),
+              Color(0xFF848181).withOpacity(0.05),
+            ],
+            stops: [
+              0.1,
+              1,
+            ]),
+        borderGradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFFffffff).withOpacity(0.5),
+            Color((0xFFFFFFFF)).withOpacity(0.5),
+          ],
+        ),
+        blur: 20,
+        child: Column(
+          children: [
 
 
-      SizedBox(
-        height: 50.h,
-      ),
-      Container(
-        height: 55.h,
-        width: 285.w,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color: Color(0xFFF8F8F8)),
-        child: TabBar(
-          indicatorColor: kThemeColor,
-          unselectedLabelColor: Colors.black,
-          labelColor: Colors.black,
-          indicatorSize: TabBarIndicatorSize.label,
-          tabs: [
-            Tab(
-              child: Text("BOOKED",style: TextStyle(fontSize: 14.sp),),
+          SizedBox(
+            height: 50.h,
+          ),
+          Container(
+            height: 55.h,
+            width: 285.w,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Color(0xFFffcf40)),
+            child: TabBar(
+              indicatorColor: kThemeColor,
+              unselectedLabelColor: Colors.black,
+              labelColor: Colors.black,
+              indicatorSize: TabBarIndicatorSize.label,
+              tabs: [
+                Tab(
+                  child: Text("BOOKED",style: TextStyle(fontSize: 14.sp),),
+                ),
+                Tab(
+
+                  child: Text("HOLD",style: TextStyle(fontSize:14.sp),),
+                ),
+
+                Tab(
+                  child: Text("ALL",style: TextStyle(fontSize: 14.sp),),
+                ),
+              ],
             ),
-            Tab(
+          ),
 
-              child: Text("HOLD",style: TextStyle(fontSize:14.sp),),
-            ),
+          Expanded(
+            child: Container(
+              child: TabBarView(
+                children:  [
+                  BookedCustomerView(),
+                  HoldCustomerView(),
 
-            Tab(
-              child: Text("ALL",style: TextStyle(fontSize: 14.sp),),
+                 AllCustomersView()
+                ],
+              ),
             ),
+          ),
           ],
         ),
       ),
-
-      Expanded(
-        child: Container(
-          child: TabBarView(
-            children:  [
-              BookedCustomerView(),
-              HoldCustomerView(),
-
-             AllCustomersView()
-            ],
-          ),
-        ),
-      ),
-      ],
     ),
       ),
     );

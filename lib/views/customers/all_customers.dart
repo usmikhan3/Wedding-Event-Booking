@@ -21,20 +21,22 @@ class _AllCustomersViewState extends State<AllCustomersView> {
         vertical: 20.h,
       ),
       child: ListView(children: [
+        SizedBox(height: 20,),
         Row(
           children: [
+
             Container(
               height: 71.h,
               width: 14.w,
-              decoration: BoxDecoration(color: Color(0xFFE22635),borderRadius: BorderRadius.circular(20) ),
+              decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(20) ),
             
             ),
             SizedBox(width: 10.w,),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: kThemeColor,
-                  borderRadius: BorderRadius.circular(30),
+                  color: kAccentColor,
+                  borderRadius: BorderRadius.circular(10),
 
                 ),
                 child: ListTile(
@@ -42,13 +44,13 @@ class _AllCustomersViewState extends State<AllCustomersView> {
                     children: [
                       Text(
                         'Customer Name',
-                        style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                        style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
                       Text(
                         '03-01-2022',
                         style: TextStyle(
-                            color: kAccentColor, fontSize: 14.sp),
+                            color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -57,13 +59,13 @@ class _AllCustomersViewState extends State<AllCustomersView> {
                       Text(
                         'Selected Event',
                         style: TextStyle(
-                            color:kAccentColor, fontSize: 14.sp),
+                            color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
                       Text(
                         'Booked',
                         style:
-                            TextStyle(fontSize: 17.sp,color: Colors.white),
+                            TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -81,15 +83,15 @@ class _AllCustomersViewState extends State<AllCustomersView> {
             Container(
               height: 71.h,
               width: 14.w,
-              decoration: BoxDecoration(color: Color(0xFFE22635),borderRadius: BorderRadius.circular(20) ),
+              decoration: BoxDecoration(color:  Colors.green,borderRadius: BorderRadius.circular(20) ),
 
             ),
             SizedBox(width: 10.w,),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: kThemeColor,
-                  borderRadius: BorderRadius.circular(30),
+                  color: kAccentColor,
+                  borderRadius: BorderRadius.circular(10),
 
                 ),
                 child: ListTile(
@@ -97,13 +99,13 @@ class _AllCustomersViewState extends State<AllCustomersView> {
                     children: [
                       Text(
                         'Customer Name',
-                        style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                        style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
                       Text(
                         '03-01-2022',
                         style: TextStyle(
-                            color: kAccentColor, fontSize: 14.sp),
+                            color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -112,122 +114,13 @@ class _AllCustomersViewState extends State<AllCustomersView> {
                       Text(
                         'Selected Event',
                         style: TextStyle(
-                            color:kAccentColor, fontSize: 14.sp),
+                            color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
                       Text(
                         'Booked',
                         style:
-                        TextStyle(fontSize: 17.sp,color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_)=>CustomerBookedDetailView())); Navigator.pushNamed(context, '/detail');
-                  },
-                ),
-              ),
-            ),
-          ],
-        ),
-        Divider(),
-        Row(
-          children: [
-            Container(
-              height: 71.h,
-              width: 14.w,
-              decoration: BoxDecoration(color: Color(0xFFF4CF3A),borderRadius: BorderRadius.circular(20) ),
-
-            ),
-            SizedBox(width: 10.w,),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: kThemeColor,
-                  borderRadius: BorderRadius.circular(30),
-
-                ),
-                child: ListTile(
-                  title: Row(
-                    children: [
-                      Text(
-                        'Customer Name',
-                        style: TextStyle(fontSize: 17.sp,color: Colors.white),
-                      ),
-                      Spacer(),
-                      Text(
-                        '03-01-2022',
-                        style: TextStyle(
-                            color: kAccentColor, fontSize: 14.sp),
-                      ),
-                    ],
-                  ),
-                  subtitle: Row(
-                    children: [
-                      Text(
-                        'Selected Event',
-                        style: TextStyle(
-                            color:kAccentColor, fontSize: 14.sp),
-                      ),
-                      Spacer(),
-                      Text(
-                        'Hold',
-                        style:
-                        TextStyle(fontSize: 17.sp,color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=>CustomerHoldDetailView()));
-                  },
-                ),
-              ),
-            ),
-          ],
-        ),
-        Divider(),
-        Row(
-          children: [
-            Container(
-              height: 71.h,
-              width: 14.w,
-              decoration: BoxDecoration(color: Color(0xFFE22635),borderRadius: BorderRadius.circular(20) ),
-
-            ),
-            SizedBox(width: 10.w,),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: kThemeColor,
-                  borderRadius: BorderRadius.circular(30),
-
-                ),
-                child: ListTile(
-                  title: Row(
-                    children: [
-                      Text(
-                        'Customer Name',
-                        style: TextStyle(fontSize: 17.sp,color: Colors.white),
-                      ),
-                      Spacer(),
-                      Text(
-                        '03-01-2022',
-                        style: TextStyle(
-                            color: kAccentColor, fontSize: 14.sp),
-                      ),
-                    ],
-                  ),
-                  subtitle: Row(
-                    children: [
-                      Text(
-                        'Selected Event',
-                        style: TextStyle(
-                            color:kAccentColor, fontSize: 14.sp),
-                      ),
-                      Spacer(),
-                      Text(
-                        'Booked',
-                        style:
-                        TextStyle(fontSize: 17.sp,color: Colors.white),
+                        TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -252,8 +145,8 @@ class _AllCustomersViewState extends State<AllCustomersView> {
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: kThemeColor,
-                  borderRadius: BorderRadius.circular(30),
+                  color: kAccentColor,
+                  borderRadius: BorderRadius.circular(10),
 
                 ),
                 child: ListTile(
@@ -261,13 +154,13 @@ class _AllCustomersViewState extends State<AllCustomersView> {
                     children: [
                       Text(
                         'Customer Name',
-                        style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                        style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
                       Text(
                         '03-01-2022',
                         style: TextStyle(
-                            color: kAccentColor, fontSize: 14.sp),
+                            color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -276,13 +169,13 @@ class _AllCustomersViewState extends State<AllCustomersView> {
                       Text(
                         'Selected Event',
                         style: TextStyle(
-                            color:kAccentColor, fontSize: 14.sp),
+                            color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
                       Text(
                         'Hold',
                         style:
-                        TextStyle(fontSize: 17.sp,color: Colors.white),
+                        TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -294,6 +187,172 @@ class _AllCustomersViewState extends State<AllCustomersView> {
             ),
           ],
         ),
+        Divider(),
+        Row(
+          children: [
+            Container(
+              height: 71.h,
+              width: 14.w,
+              decoration: BoxDecoration(color:  Colors.green,borderRadius: BorderRadius.circular(20) ),
+
+            ),
+            SizedBox(width: 10.w,),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: kAccentColor,
+                  borderRadius: BorderRadius.circular(10),
+
+                ),
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Text(
+                        'Customer Name',
+                        style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Text(
+                        '03-01-2022',
+                        style: TextStyle(
+                            color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  subtitle: Row(
+                    children: [
+                      Text(
+                        'Selected Event',
+                        style: TextStyle(
+                            color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Text(
+                        'Booked',
+                        style:
+                        TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>CustomerBookedDetailView()));
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
+        Divider(),
+        Row(
+          children: [
+            Container(
+              height: 71.h,
+              width: 14.w,
+              decoration: BoxDecoration(color: Color(0xFFF4CF3A),borderRadius: BorderRadius.circular(20) ),
+
+            ),
+            SizedBox(width: 10.w,),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: kAccentColor,
+                  borderRadius: BorderRadius.circular(10),
+
+                ),
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Text(
+                        'Customer Name',
+                        style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Text(
+                        '03-01-2022',
+                        style: TextStyle(
+                            color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  subtitle: Row(
+                    children: [
+                      Text(
+                        'Selected Event',
+                        style: TextStyle(
+                            color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Text(
+                        'Hold',
+                        style:
+                        TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>CustomerBookedDetailView()));
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
+        Divider(),
+        Row(
+          children: [
+            Container(
+              height: 71.h,
+              width: 14.w,
+              decoration: BoxDecoration(color: Color(0xFFF4CF3A),borderRadius: BorderRadius.circular(20) ),
+
+            ),
+            SizedBox(width: 10.w,),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: kAccentColor,
+                  borderRadius: BorderRadius.circular(10),
+
+                ),
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Text(
+                        'Customer Name',
+                        style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Text(
+                        '03-01-2022',
+                        style: TextStyle(
+                            color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  subtitle: Row(
+                    children: [
+                      Text(
+                        'Selected Event',
+                        style: TextStyle(
+                            color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Text(
+                        'Hold',
+                        style:
+                        TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>CustomerBookedDetailView()));
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
+
       ]),
     );
   }

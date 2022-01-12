@@ -14,6 +14,7 @@ class Event {
 
   final Color backgroundColor;
   final DateTime from;
+  final DateTime to;
 
   Event({
     required this.title,
@@ -25,7 +26,7 @@ class Event {
     required this.gathering,
     required  this.decoration,
     required  this.status,
-
+    required this.to,
     required this.backgroundColor,
     required this.from,
     required this.ownerName,

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:signature_event_booking/constants/constants.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton2 extends StatelessWidget {
   final String text;
   final VoidCallback onPress;
-  const CustomButton({
+  const CustomButton2({
     required this.text,
     required this.onPress,
   });
@@ -15,17 +15,18 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onPress,
       child: Container(
-        height: 55.h,
-        width: 330.w,
+        height: 69.h,
+        //width: 330.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color(0xFFffcf40),
+          color: kThemeColor,
+          border: Border.all(color: kAccentColor)
         ),
         child: Center(
           child: Text(
             text,
             style: TextStyle(
-                color:  kThemeColor, fontSize: 16.sp, fontWeight: FontWeight.bold),
+                color: kAccentColor, fontSize: 18.sp, fontWeight: FontWeight.bold),
           ),
         ),
       ),

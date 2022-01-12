@@ -19,10 +19,11 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
       padding:EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h,),
       child: ListView(
         children: [
+          SizedBox(height: 20,),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -30,13 +31,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -45,13 +46,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Hold',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -63,8 +64,8 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
           Divider(),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -72,13 +73,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -87,13 +88,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Hold',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -105,8 +106,8 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
           Divider(),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -114,13 +115,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -129,13 +130,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Hold',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -147,8 +148,8 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
           Divider(),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -156,13 +157,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -171,13 +172,13 @@ class _HoldCustomerViewState extends State<HoldCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Hold',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:signature_event_booking/constants/constants.dart';
 import 'package:signature_event_booking/models/event_model.dart';
 import 'package:signature_event_booking/utils/utils.dart';
@@ -16,6 +17,7 @@ class _CustomerHoldDetailViewState extends State<CustomerHoldDetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kThemeColor,
       appBar: AppBar(
         centerTitle: true,
         leading: GestureDetector(
@@ -67,289 +69,319 @@ class _CustomerHoldDetailViewState extends State<CustomerHoldDetailView> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 30.h),
-        child: SingleChildScrollView(
-          child: Container(
-
-            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-            decoration: BoxDecoration(
-                color: kThemeColor, borderRadius: BorderRadius.circular(10.r)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-
-                // ListView.separated(
-                //   physics: NeverScrollableScrollPhysics(),
-                //   shrinkWrap: true,
-                //   itemCount: detailList.length,
-                //   itemBuilder: (_, index) {
-                //     return detailList[index];
-                //   },
-                //   separatorBuilder: (_,index)=>Divider(thickness: 1.5.h,color: kThemeColor,),
-                // ),
-                //TODO PARTNER
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Partner: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "Salman",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor,),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                //TODO CUSTOMER NAME
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Customer Name: ",
-                      style: TextStyle(
-                          color:  Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "Usman",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                //TODO CUSTOMER PHONE
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Customer Phone Number: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "03092023003",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-
-                //TODO EVENT
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Event: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "Walima",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-
-                //TODO GATHERING
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Gathering: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "1000",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-
-                //TODO Decoration Service
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Decoration Service: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "YES",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                //TODO ADVANCE
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Advance Payment: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "10000",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                //TODO REMAINING
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Remaining Payment: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "80000",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                //TODO EVENT DATE
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Event Date: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "20-05-2022"
-                        ,
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                //TODO STATUS
-                SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "STATUS: ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.75.sp,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Flexible(
-                      child: Text(
-                        "HOLD",
-                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                  ],
-                ),
-                Divider(thickness: 1.5.h,color: kAccentColor,),
-
-                SizedBox(height: 20,),
-
-
-
-
-                Text(
-                  "Description: ",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12.75.sp,
-                      fontWeight: FontWeight.w700),
-                ),
-                SizedBox(height: 10,),
-                Text(
-                  "Dummy text",
-                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w300,color: kAccentColor),textAlign: TextAlign.left,
-                )
+        padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+        child: GlassmorphicContainer(
+          height:  MediaQuery.of(context).size.height * 0.9,
+          width: MediaQuery.of(context).size.width,
+          padding: EdgeInsets.symmetric(horizontal: 20.w,),
+          borderRadius: 20,
+          blur: 20,
+          alignment: Alignment.bottomCenter,
+          border: 2,
+          linearGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF848181).withOpacity(0.5),
+                Color(0xFF848181).withOpacity(0.05),
               ],
+              stops: [
+                0.1,
+                1,
+              ]),
+          borderGradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFFffffff).withOpacity(0.5),
+              Color((0xFFFFFFFF)).withOpacity(0.5),
+            ],
+          ),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 30.h),
+            child: SingleChildScrollView(
+              child: Container(
+
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                    // ListView.separated(
+                    //   physics: NeverScrollableScrollPhysics(),
+                    //   shrinkWrap: true,
+                    //   itemCount: detailList.length,
+                    //   itemBuilder: (_, index) {
+                    //     return detailList[index];
+                    //   },
+                    //   separatorBuilder: (_,index)=>Divider(thickness: 1.5.h,color: kThemeColor,),
+                    // ),
+                    //TODO PARTNER
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Partner: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "Salman",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor,),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    //TODO CUSTOMER NAME
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Customer Name: ",
+                          style: TextStyle(
+                              color:  Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "Usman",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    //TODO CUSTOMER PHONE
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Customer Phone Number: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "03092023003",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+
+                    //TODO EVENT
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Event: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "Walima",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+
+                    //TODO GATHERING
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Gathering: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "1000",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+
+                    //TODO Decoration Service
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Decoration Service: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "YES",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    //TODO ADVANCE
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Advance Payment: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "10000",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    //TODO REMAINING
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Remaining Payment: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "80000",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    //TODO EVENT DATE
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "Event Date: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:  16.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "20-05-2022"
+                            ,
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    //TODO STATUS
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          "STATUS: ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12.75.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "HOLD",
+                            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700,color: kAccentColor),textAlign: TextAlign.left,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    Divider(thickness: 1.5.h,color: kAccentColor,),
+
+                    SizedBox(height: 20,),
+
+
+
+
+                    Text(
+                      "Description: ",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12.75.sp,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(height: 10,),
+                    Text(
+                      "Dummy text",
+                      style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w300,color: kAccentColor),textAlign: TextAlign.left,
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
         ),

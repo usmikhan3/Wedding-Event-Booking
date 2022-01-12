@@ -29,16 +29,17 @@ Widget build(BuildContext context) {
         labelText,
         style: TextStyle(
           fontSize: 12.75.sp,
-          color: Color(0xFF7F8D9F),
+          color: Colors.white,
         ),
       ),
       TextFormField(
         controller: controller,
         keyboardType: textInputType,
         textInputAction: textInputAction,
+        style: TextStyle(fontSize: 19.5.sp,color: Colors.white),
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: TextStyle(fontSize: 19.5.sp),
+          hintStyle: TextStyle(fontSize: 19.5.sp,color: Colors.white30),
           focusColor: Colors.black,
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,

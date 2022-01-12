@@ -41,6 +41,11 @@ class _TasksWidgetState extends State<TasksWidget> {
       selectionDecoration: BoxDecoration(
         color: Colors.red,
       ),
+
+      scheduleViewSettings: ScheduleViewSettings(
+
+        hideEmptyScheduleWeek: true,
+      ),
       onTap: (details) {
         if (details.appointments == null) return;
 

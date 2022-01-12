@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:signature_event_booking/constants/constants.dart';
 class PartnerListView extends StatefulWidget {
   const PartnerListView({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class _PartnerListViewState extends State<PartnerListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kThemeColor,
       appBar: AppBar(
       centerTitle: true,
       leading: GestureDetector(
@@ -43,228 +45,257 @@ class _PartnerListViewState extends State<PartnerListView> {
       ),
     ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h,),
-        child: ListView(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                color: kThemeColor,
-                borderRadius: BorderRadius.circular(30),
+        padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+        child: GlassmorphicContainer(
+          border: 2,
+          height: 999.h,
+          width: MediaQuery.of(context).size.width,
+          borderRadius: 20,
+          linearGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF848181).withOpacity(0.5),
+                Color(0xFF848181).withOpacity(0.05),
+              ],
+              stops: [
+                0.1,
+                1,
+              ]),
+          borderGradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFFffffff).withOpacity(0.5),
+              Color((0xFFFFFFFF)).withOpacity(0.5),
+            ],
+          ),
+          blur: 20,
+          child: Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h,),
+            child: ListView(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: kAccentColor,
+                    borderRadius: BorderRadius.circular(10),
 
-              ),
-              child: ListTile(
-                leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
-                title: Row(
-                  children: [
-                    Text(
-                      'Partner Name',
-                      style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                  ),
+                  child: ListTile(
+                    leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
+                    title: Row(
+                      children: [
+                        Text(
+                          'Partner Name',
+                          style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '0333-58747478',
+                          style: TextStyle(
+                              color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
-                    Spacer(),
-                    Text(
-                      '0333-58747478',
-                      style: TextStyle(
-                          color: kAccentColor, fontSize: 14.sp),
+                    subtitle: Row(
+                      children: [
+                        Text(
+                          'partnermail123@gmail.com',
+                          style: TextStyle(
+                              color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '1',
+                          style:
+                          TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                subtitle: Row(
-                  children: [
-                    Text(
-                      'partnermail123@gmail.com',
-                      style: TextStyle(
-                          color:kAccentColor, fontSize: 14.sp),
-                    ),
-                    Spacer(),
-                    Text(
-                      '1',
-                      style:
-                      TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                  ],
-                ),
-                onTap: () {
+                    onTap: () {
 
-                },
-              ),
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  decoration: BoxDecoration(
+                    color: kAccentColor,
+                    borderRadius: BorderRadius.circular(10),
+
+                  ),
+                  child: ListTile(
+                    leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
+                    title: Row(
+                      children: [
+                        Text(
+                          'Partner Name',
+                          style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '0333-58747478',
+                          style: TextStyle(
+                              color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    subtitle: Row(
+                      children: [
+                        Text(
+                          'partnermail123@gmail.com',
+                          style: TextStyle(
+                              color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '2',
+                          style:
+                          TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  decoration: BoxDecoration(
+                    color: kAccentColor,
+                    borderRadius: BorderRadius.circular(10),
+
+                  ),
+                  child: ListTile(
+                    leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
+                    title: Row(
+                      children: [
+                        Text(
+                          'Partner Name',
+                          style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '0333-58747478',
+                          style: TextStyle(
+                              color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    subtitle: Row(
+                      children: [
+                        Text(
+                          'partnermail123@gmail.com',
+                          style: TextStyle(
+                              color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '3',
+                          style:
+                          TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  decoration: BoxDecoration(
+                    color: kAccentColor,
+                    borderRadius: BorderRadius.circular(10),
+
+                  ),
+                  child: ListTile(
+                    leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
+                    title: Row(
+                      children: [
+                        Text(
+                          'Partner Name',
+                          style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '0333-58747478',
+                          style: TextStyle(
+                              color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    subtitle: Row(
+                      children: [
+                        Text(
+                          'partnermail123@gmail.com',
+                          style: TextStyle(
+                              color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '4',
+                          style:
+                          TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  decoration: BoxDecoration(
+                    color: kAccentColor,
+                    borderRadius: BorderRadius.circular(10),
+
+                  ),
+                  child: ListTile(
+                    leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
+                    title: Row(
+                      children: [
+                        Text(
+                          'Partner Name',
+                          style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '0333-58747478',
+                          style: TextStyle(
+                              color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    subtitle: Row(
+                      children: [
+                        Text(
+                          'partnermail123@gmail.com',
+                          style: TextStyle(
+                              color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          '5',
+                          style:
+                          TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+
+                    },
+                  ),
+                ),
+
+
+
+
+              ],
             ),
-            Divider(),
-            Container(
-              decoration: BoxDecoration(
-                color: kThemeColor,
-                borderRadius: BorderRadius.circular(30),
-
-              ),
-              child: ListTile(
-                leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
-                title: Row(
-                  children: [
-                    Text(
-                      'Partner Name',
-                      style: TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                    Spacer(),
-                    Text(
-                      '0333-58747478',
-                      style: TextStyle(
-                          color: kAccentColor, fontSize: 14.sp),
-                    ),
-                  ],
-                ),
-                subtitle: Row(
-                  children: [
-                    Text(
-                      'partnermail123@gmail.com',
-                      style: TextStyle(
-                          color:kAccentColor, fontSize: 14.sp),
-                    ),
-                    Spacer(),
-                    Text(
-                      '2',
-                      style:
-                      TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                  ],
-                ),
-                onTap: () {
-
-                },
-              ),
-            ),
-            Divider(),
-            Container(
-              decoration: BoxDecoration(
-                color: kThemeColor,
-                borderRadius: BorderRadius.circular(30),
-
-              ),
-              child: ListTile(
-                leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
-                title: Row(
-                  children: [
-                    Text(
-                      'Partner Name',
-                      style: TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                    Spacer(),
-                    Text(
-                      '0333-58747478',
-                      style: TextStyle(
-                          color: kAccentColor, fontSize: 14.sp),
-                    ),
-                  ],
-                ),
-                subtitle: Row(
-                  children: [
-                    Text(
-                      'partnermail123@gmail.com',
-                      style: TextStyle(
-                          color:kAccentColor, fontSize: 14.sp),
-                    ),
-                    Spacer(),
-                    Text(
-                      '3',
-                      style:
-                      TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                  ],
-                ),
-                onTap: () {
-
-                },
-              ),
-            ),
-            Divider(),
-            Container(
-              decoration: BoxDecoration(
-                color: kThemeColor,
-                borderRadius: BorderRadius.circular(30),
-
-              ),
-              child: ListTile(
-                leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
-                title: Row(
-                  children: [
-                    Text(
-                      'Partner Name',
-                      style: TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                    Spacer(),
-                    Text(
-                      '0333-58747478',
-                      style: TextStyle(
-                          color: kAccentColor, fontSize: 14.sp),
-                    ),
-                  ],
-                ),
-                subtitle: Row(
-                  children: [
-                    Text(
-                      'partnermail123@gmail.com',
-                      style: TextStyle(
-                          color:kAccentColor, fontSize: 14.sp),
-                    ),
-                    Spacer(),
-                    Text(
-                      '4',
-                      style:
-                      TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                  ],
-                ),
-                onTap: () {
-
-                },
-              ),
-            ),
-            Divider(),
-            Container(
-              decoration: BoxDecoration(
-                color: kThemeColor,
-                borderRadius: BorderRadius.circular(30),
-
-              ),
-              child: ListTile(
-                leading:ClipRRect(borderRadius: BorderRadius.circular(30),child: Image.asset("assets/images/profile.png")) ,
-                title: Row(
-                  children: [
-                    Text(
-                      'Partner Name',
-                      style: TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                    Spacer(),
-                    Text(
-                      '0333-58747478',
-                      style: TextStyle(
-                          color: kAccentColor, fontSize: 14.sp),
-                    ),
-                  ],
-                ),
-                subtitle: Row(
-                  children: [
-                    Text(
-                      'partnermail123@gmail.com',
-                      style: TextStyle(
-                          color:kAccentColor, fontSize: 14.sp),
-                    ),
-                    Spacer(),
-                    Text(
-                      '5',
-                      style:
-                      TextStyle(fontSize: 17.sp,color: Colors.white),
-                    ),
-                  ],
-                ),
-                onTap: () {
-
-                },
-              ),
-            ),
-
-
-
-
-          ],
+          ),
         ),
       ),
     );

@@ -9,16 +9,17 @@ import 'package:signature_event_booking/constants/constants.dart';
 import 'package:signature_event_booking/provider/provider.dart';
 
 import 'package:signature_event_booking/views/login/login2_view.dart';
+import 'package:signature_event_booking/views/login/login3_view.dart';
 
 
 
 
 void main() {
-  runApp(DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => const MyApp(),
-  ));
- // runApp( const MyApp());
+  // runApp(DevicePreview(
+  //   enabled: !kReleaseMode,
+  //   builder: (context) => const MyApp(),
+  // ));
+ runApp( const MyApp());
 
 }
 
@@ -39,7 +40,15 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
               primaryColor: kThemeColor,
               primarySwatch: Colors.red,
-              fontFamily: "ProximaNova"),
+              fontFamily: "ProximaNova",
+            textTheme: TextTheme(
+              bodyText1: TextStyle(),
+              bodyText2: TextStyle(),
+            ).apply(
+              bodyColor: Colors.white,
+              displayColor: Colors.white,
+            ),
+          ),
 
           // routes: {
           //   '/splash': (context) => SplashView(),
@@ -51,7 +60,7 @@ class MyApp extends StatelessWidget {
           //   // '/detail': (context) => CustomerDetailView(event: ,),
           // },
           //initialRoute: '/splash',
-          home: Login2View(),
+          home: Login3View(),
         ),
       ),
     );

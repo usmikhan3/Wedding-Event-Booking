@@ -16,10 +16,11 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
       padding:EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h,),
       child: ListView(
         children: [
+          SizedBox(height: 20,),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -27,13 +28,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -42,13 +43,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Booked',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -60,8 +61,8 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
           Divider(),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -69,13 +70,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -84,13 +85,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Booked',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -102,8 +103,8 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
           Divider(),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -111,13 +112,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -126,13 +127,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Booked',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -144,8 +145,8 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
           Divider(),
           Container(
             decoration: BoxDecoration(
-              color: kThemeColor,
-              borderRadius: BorderRadius.circular(30),
+              color: kAccentColor,
+              borderRadius: BorderRadius.circular(10),
 
             ),
             child: ListTile(
@@ -153,13 +154,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                 children: [
                   Text(
                     'Customer Name',
-                    style: TextStyle(fontSize: 17.sp,color: Colors.white),
+                    style: TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     '03-01-2022',
                     style: TextStyle(
-                        color: kAccentColor, fontSize: 14.sp),
+                        color: kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -168,13 +169,13 @@ class _BookedCustomerViewState extends State<BookedCustomerView> {
                   Text(
                     'Selected Event',
                     style: TextStyle(
-                        color:kAccentColor, fontSize: 14.sp),
+                        color:kThemeColor, fontSize: 14.sp,fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
                   Text(
                     'Booked',
                     style:
-                    TextStyle(fontSize: 17.sp,color: Colors.white),
+                    TextStyle(fontSize: 17.sp,color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
